@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Документация Moscow County Roleplay">
+  <title>Moscow County — Документация</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <div class="space-stars" aria-hidden="true"></div>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Moscow County — главная">
+        <span class="brand-mark"><img src="assets/logo.png" alt=""></span>
+        <span class="brand-name">Moscow County</span>
+      </a>
+
+      <div class="top-actions">
+        <label class="search" for="searchInput">
+          <span class="search-icon">⌕</span>
+          <input id="searchInput" type="search" placeholder="Поиск по документации…" autocomplete="off">
+          <kbd>Ctrl K</kbd>
+        </label>
+
+        <div class="theme-picker">
+          <button class="theme-button" id="themeButton" type="button" aria-label="Выбрать тему" aria-expanded="false">
+            <span id="themeIcon" aria-hidden="true">☾</span>
+          </button>
+          <div class="theme-menu" id="themeMenu" role="menu">
+            <button type="button" data-theme="dark" role="menuitem"><span>☾</span> Тёмная</button>
+            <button type="button" data-theme="light" role="menuitem"><span>☀</span> Светлая</button>
+            <button type="button" data-theme="space" role="menuitem"><span>✦</span> Космос</button>
+          </div>
+        </div>
+
+        <button class="top-button muted action-button" type="button" data-action="support">Поддержка</button>
+        <button class="top-button accent action-button" type="button" data-action="login">Войти</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <div class="side-label">Разделы</div>
+        <section class="side-group">
+          <button class="side-link action-button" type="button" data-action="server-rules">Правила Сервера</button>
+          <button class="side-link action-button" type="button" data-action="rp-terms">РП Термины</button>
+          <button class="side-link action-button" type="button" data-action="discord-rules">Правила Discord</button>
+        </section>
+      </aside>
+
+      <section class="content">
+        <div class="breadcrumbs">Документация <span>/</span> Главная</div>
+
+        <article class="hero">
+          <img src="assets/hero-banner.png" alt="Moscow County Roleplay">
+        </article>
+
+        <header class="intro">
+          <div class="eyebrow">Официальная документация</div>
+          <h1>Moscow County Roleplay</h1>
+          <p>
+            Добро пожаловать на сайт <strong>Moscow County</strong> — здесь вы найдёте правила,
+            гайды и всю необходимую информацию о нашем проекте. Ознакомьтесь с разделами,
+            чтобы быстрее разобраться в системе и игровом процессе.
+          </p>
+        </header>
+
+        <section class="quick" id="quick-start">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow">Навигация</div>
+              <h2>Быстрый старт</h2>
+            </div>
+            <span class="result-count" id="resultCount">3 раздела</span>
+          </div>
+
+          <div class="cards" id="cards">
+            <article class="doc-card action-card" id="server-rules" data-action="server-rules" tabindex="0" role="button" data-search="правила сервера сервер правила проекта основы порядок">
+              <div class="card-number">01</div>
+              <div>
+                <h3>Правила Сервера</h3>
+                <p>Основные правила проекта, обязательные для всех участников Moscow County.</p>
+              </div>
+              <span class="arrow">→</span>
+            </article>
+
+            <article class="doc-card action-card" id="rp-terms" data-action="rp-terms" tabindex="0" role="button" data-search="рп термины roleplay rp термины определения нрп">
+              <div class="card-number">02</div>
+              <div>
+                <h3>РП Термины</h3>
+                <p>Ключевые термины и понятия, которые помогут быстро освоиться в ролевой игре.</p>
+              </div>
+              <span class="arrow">→</span>
+            </article>
+
+            <article class="doc-card action-card" id="discord-rules" data-action="discord-rules" tabindex="0" role="button" data-search="правила discord дискорд чат сервер общение">
+              <div class="card-number">03</div>
+              <div>
+                <h3>Правила Discord</h3>
+                <p>Базовые правила общения и поведения в официальном Discord-сообществе.</p>
+              </div>
+              <span class="arrow">→</span>
+            </article>
+          </div>
+
+          <div class="no-results" id="noResults" hidden>
+            <strong>Ничего не найдено</strong>
+            <span>Попробуйте другое слово или название раздела.</span>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <span>Moscow County Roleplay</span>
+          <span>Документация проекта</span>
+        </footer>
+      </section>
+
+      <aside class="right-rail">
+        <div class="rail-title">На этой странице</div>
+        <a href="#top">Документация Moscow County</a>
+        <a class="active" href="#quick-start">Быстрый старт</a>
+
+      </aside>
+    </main>
+  </div>
+
+  <div class="dev-note">Сайт находится в разработке. Всё может изменяться.</div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <div class="toast-icon">!</div>
+    <div>
+      <strong>Пока что в разработке</strong>
+      <span>Этот раздел ещё не готов. Скоро здесь появится больше возможностей.</span>
+    </div>
+    <button id="toastClose" type="button" aria-label="Закрыть">×</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
